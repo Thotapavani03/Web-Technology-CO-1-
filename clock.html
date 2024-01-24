@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ANALOG CLOCK</title> 
+        <style>
+            @import url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Analogue_clock_face.svg/2048px-Analogue_clock_face.svg.png");
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins', sans-serif;
+            }
+            :root{
+                --theme-color:#EA2027;
+            }
+            body{
+                background-image: url("https://rukminim2.flixcart.com/image/850/1000/kxxl9jk0/poster/k/n/3/small-zdwn9vrq-texture-pattern-black-background-wallpaper-poster-original-imaga9xsk6zkkqw2.jpeg?q=20");
+                height: 100vh;
+                width:100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            .analog-clock{
+                width: 500px;
+                height: 500px;
+                background-image: url('flower.jpg');
+                background-size: cover;
+                background-position: center;
+                border-radius:50%;
+                border: 10px ridge var(--theme-color);
+                position: relative;
+            }
+            .analog-clock::before{
+                content:'TITAN';
+                color: var(--theme-color);
+                position:absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 30px;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+            }
+            .analog-clock::after{
+                content:'';
+                position:absolute;
+                width: 15px;
+                height: 15px;
+                background-color: var(--theme-color); 
+                border-radius: 50%;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                z-index: 10;
+            }
+            .number{
+                --rotate:0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                color: var(--theme-color);
+                text-align: center;
+                font-size: 40px;
+                transform: rotate(var(--rotate));
+                font-family: 'Anton',sans-serif;
+
+
+            }
+            .number-1{ margin-top: 35px;margin-left: 120px;}
+            .number-2{ margin-top:115px;margin-left: 180px;}
+            .content{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 18px;
+                color: black;
+                top: 65%;
+                left: 2%;
+                
+            }
+            .number-3{ margin-top: 225px;margin-left: 225px;}
+            .number-4{ margin-top: 330px;
+                        margin-left: 180px;}
+            .number-5{ margin-top: 400px;margin-left:120px;}
+            .number-6{margin-top:440px; }
+            .number-7{ margin-top: 400px;margin-right: 120px;right: 0px;}
+            .number-8{margin-top: 330px;
+                        margin-right: 180px;
+                        right: 0px;}
+            .number-9{  margin-top: 225px;margin-right: 225px;right: 0px;}
+            .number-10{ margin-top:115px;margin-right: 180px;right: 0px;}
+            .number-11{ margin-top: 35px;margin-right: 120px;right: 0px;}
+
+            .needle{
+                --rotation:0;
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+                transform-origin: bottom;
+                transform: translatex(-50%) rotate(calc(var(--rotation)*1deg));
+                
+                z-index: 8;
+                
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+
+            }
+            .sec{
+                background-color: red;
+                width: 3px;
+                height: 40%;
+            }
+            .min{
+                background-size:cover;
+                background-color: black;
+                width: 7px;
+                height: 35%;
+                
+            }
+            .hrs{
+                background-color: black;
+                background-size: cover;
+                width: 10px;
+                height: 25%;
+                text-align: center;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="analog-clock">
+            <div class="needle hrs"></div>
+            <div class="needle min"></div>
+            <div class="needle sec"></div>
+            <div class="number number-1"><span>1</span></div>
+            <div class="number number-2"><span>2</span></div>
+            <div class="number number-3"><span>3</span></div>
+            <div class="number content">Trust <br>The Timing Of  Your life</div>
+            <div class="number number-4"><span>4</span></div>
+            <div class="number number-5"><span>5</span></div>
+            <div class="number number-6"><span>6</span></div>
+            <div class="number number-7"><span>7</span></div>
+            <div class="number number-8"><span>8</span></div>
+            <div class="number number-9"><span>9</span></div>
+            <div class="number number-10"><span>10</span></div>
+            <div class="number number-11"><span>11</span></div>
+            <div class="number number-12"><span>12</span></div>
+            
+            
+            
+           
+
+        </div>
+
+        
+       <script src="script1.js"></script>
+    </body>
+</html>
